@@ -272,6 +272,9 @@ get_status_led() {
 	minibox-v1)
 		status_led="minibox-v1:green:system"
 		;;
+	minibox-v3)
+		status_led="minibox-v3:green:system"
+		;;
 	oolite)
 		status_led="oolite:red:system"
 		;;
