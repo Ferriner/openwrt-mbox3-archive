@@ -40,7 +40,7 @@ static struct flash_platform_data gs_minibox_v3_flash_data = {
 static struct gpio_led gs_minibox_v3_leds_gpio[] __initdata = {
 	{
 		.name		= "minibox-v3:green:system",
-		.gpio		= GS_MINIBOX_v3_GPIO_LED_SYSTEM,
+		.gpio		= GS_MINIBOX_V3_GPIO_LED_SYSTEM,
 		.active_low	= 1,
 	},
 };
@@ -50,8 +50,8 @@ static struct gpio_keys_button gs_minibox_v3_gpio_keys[] __initdata = {
 		.desc		= "reset",
 		.type		= EV_KEY,
 		.code		= KEY_RESTART,
-		.debounce_interval = GS_MINIBOX_v3_KEYS_DEBOUNCE_INTERVAL,
-		.gpio		= GS_MINIBOX_v3_GPIO_BTN_RESET,
+		.debounce_interval = GS_MINIBOX_V3_KEYS_DEBOUNCE_INTERVAL,
+		.gpio		= GS_MINIBOX_V3_GPIO_BTN_RESET,
 		.active_low	= 0,
 	},
 };
@@ -64,7 +64,7 @@ static void __init gs_minibox_v3_setup(void)
 	ath79_register_leds_gpio(-1, ARRAY_SIZE(gs_minibox_v3_leds_gpio),
 				 gs_minibox_v3_leds_gpio);
 
-	ath79_register_gpio_keys_polled(-1, GS_MINIBOX_v3_KEYS_POLL_INTERVAL,
+	ath79_register_gpio_keys_polled(-1, GS_MINIBOX_V3_KEYS_POLL_INTERVAL,
 					ARRAY_SIZE(gs_minibox_v3_gpio_keys),
 					gs_minibox_v3_gpio_keys);
 
@@ -81,5 +81,5 @@ static void __init gs_minibox_v3_setup(void)
 	ath79_register_wmac(ee, mac);
 }
 
-MIPS_MACHINE(ATH79_MACH_GS_MINIBOX_v3, "MINIBOX-v3",
-	     "MiniBox v3", gs_minibox_v3_setup);
+MIPS_MACHINE(ATH79_MACH_GS_MINIBOX_V3, "MINIBOX-V3",
+	     "MiniBox V3", gs_minibox_v3_setup);
