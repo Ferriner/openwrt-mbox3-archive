@@ -129,6 +129,9 @@ tplink_board_detect() {
 	"066602"*)
 		model="OMYlink OMY-X1"
 		;;
+	"3C000105")
+		model="MINIBOX_V3"
+		;;
 	"3C0001"*)
 		model="OOLITE"
 		;;
