@@ -248,6 +248,15 @@ define Device/minibox-v1
 endef
 TARGET_DEVICES += minibox-v1
 
+define Device/minibox-v3
+    $(Device/tplink-16mlzma)
+    BOARDNAME := MINIBOX-V3
+    DEVICE_PROFILE := MINIBOXV3
+    TPLINK_HWID := 0x3C000105
+    CONSOLE := ttyATH0,115200
+endef
+TARGET_DEVICES += minibox-v3
+
 define Device/omy-g1
     $(Device/tplink-16mlzma)
     BOARDNAME := OMY-G1
