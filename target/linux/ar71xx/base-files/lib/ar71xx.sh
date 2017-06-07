@@ -590,6 +590,9 @@ ar71xx_board_detect() {
 	*"MiniBox V1.0")
 		name="minibox-v1"
 		;;
+	*"MiniBox V3")
+		name="minibox-v3"
+		;;
 	*MR12)
 		name="mr12"
 		;;
